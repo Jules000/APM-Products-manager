@@ -8,6 +8,7 @@ export class ProductListComponent {
     pageTitle: string = 'Product List';
     imageWidth = 50;
     imageMargin = 2;
+    showImage = false; //property that signify the state of the images in the table(shown/hidden)
     products: any[] = [
         {
             "productId": 1,
@@ -39,5 +40,9 @@ export class ProductListComponent {
             "starRating": 4.8,
             "imageUrl": "assets/images/hammer.png"
           },
-    ]
+    ];
+
+    toggleImage():void{
+      this.showImage = !this.showImage;
+    }
 }
